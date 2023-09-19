@@ -1,0 +1,49 @@
+1)
+class Person {
+    constructor(firstName, lastName, age, gender, email, address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        this.email = email;
+        this.address = address;
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    getContactInfo() {
+        return `Email: ${this.email}\nAddress: ${this.address}`;
+    }
+
+    getFullDetails() {
+        return `Name: ${this.getFullName()}\nAge: ${this.age}\nGender: ${this.gender}\n${this.getContactInfo()}`;
+    }
+}
+
+2)
+
+class UberPriceCalculator {
+    constructor(baseFare, costPerKm, costPerMinute, surgeMultiplier) {
+        this.baseFare = baseFare;
+        this.costPerMile = costPerMile;
+        this.costPerMinute = costPerMinute;
+        this.surgeMultiplier = surgeMultiplier;
+    }
+
+    calculatePrice(distanceInMiles, timeInMinutes) {
+        const fareWithoutSurge = 
+            this.baseFare +
+            (distanceInMiles * this.costPerKm) +
+            (timeInMinutes * this.costPerMinute);
+
+        const finalFare = fareWithoutSurge * this.surgeMultiplier;
+
+        return `Uber Price: $${finalFare.toFixed(2)}`;
+    }
+}
+
+
+
+
